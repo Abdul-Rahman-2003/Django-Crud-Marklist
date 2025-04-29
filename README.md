@@ -1,0 +1,1 @@
+Its a Simple student management system. It created using create read update delete which is shortly called us crud system. This system is implemented in django Framework. it automatically calculates the total and gives the grade.
