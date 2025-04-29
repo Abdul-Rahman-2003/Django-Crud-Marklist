@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css1/c1.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <form class="post-form" method="POST" action="/std">
+        {% csrf_token %}
+        <div class="container">
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                <div class="col-sm-4">
+                    <h3>Enter Details</h3>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class=" form-group row">
+                <label class="col-sm-2 col-form-label">Student id:</label>
+                <div class="col-sm-4">
+                    {{ form.sid }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Student name:</label>
+                <div class="col-sm-4">
+                    {{ form.sname }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Tamil mark:</label>
+                <div class="col-sm-4">
+                    {{ form.stamil }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">English mark:</label>
+                <div class="col-sm-4">
+                    {{ form.senglish }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Maths mark:</label>
+                <div class="col-sm-4">
+                    {{ form.smaths }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">science mark:</label>
+                <div class="col-sm-4">
+                    {{ form.sscience }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Social mark:</label>
+                <div class="col-sm-4">
+                    {{ form.ssocial }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <Label class="col-sm-2 col-form-label"></Label>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-warning">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>

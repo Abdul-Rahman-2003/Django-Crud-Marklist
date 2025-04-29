@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css1/c1.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+   
+    <table class="container mt-3 table table-striped table-bordered table-dark table-lg">
+        <thead class="thead-dark">
+            <tr>
+                <th>STUDENT ID</th>
+                <th>STUDENT NAME</th>
+                <th>TAMIL</th>
+                <th>ENGLISH</th>
+                <th>MATHS</th>
+                <th>SCIENCE</th>
+                <th>SOCIAL</th>
+                <th>TOTAL</th>
+                <th>GRADE</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% for student in students %}
+            <tr>
+                <td>{{ student.sid }}</td>
+                <td>{{ student.sname }}</td>
+                <td>{{ student.stamil }}</td>
+                <td>{{ student.senglish }}</td>
+                <td>{{ student.smaths }}</td>
+                <td>{{ student.sscience }}</td>
+                <td>{{ student.ssocial }}</td>
+                <td>{{ student.stotal }}</td>
+                <td>{{ student.sgrade }}</td>
+                <td>
+                    <a href="/edit/{{ student.id }}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+                    <a href="/delete/{{ student.id }}">Delete</a>
+                </td>       
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+    
+    <center><a href="/std" class="btn btn-primary">Add New Record</a></center>
+
+    
+    
+</body>
+</html>
+
+

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: marklist-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn rest.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: rest.settings

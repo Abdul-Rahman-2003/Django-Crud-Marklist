@@ -1,0 +1,10 @@
+asgiref==3.8.1
+Django==5.2
+django-cors-headers==4.7.0
+djangorestframework==3.16.0
+gunicorn==23.0.0
+mysql==0.0.3
+mysqlclient==2.2.7
+packaging==25.0
+sqlparse==0.5.3
+tzdata==2025.2
